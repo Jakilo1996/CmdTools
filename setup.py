@@ -34,6 +34,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     python_requires='>=3.6',
     # 可执行文件的函数入口
+
     py_modules=['cli'],
     entry_points={
         'console_scripts': [
