@@ -11,7 +11,7 @@
 
 from cli.excel_tools import ExcelHandle
 import argparse
-import os
+import os,sys
 
 
 def main():
@@ -38,15 +38,21 @@ def main():
     print('命令行接收参数', args)
     # print('当前工作目录：', os.listdir)
     type_option = args.type
-    base_data_path = f'data/{type_option}/'
+    if sys.platform == 'darwin':
+        base_data_path = f'data/{type_option}/'
+    elif sys.platform == 'win32':
+        base_data_path = f'data\\{type_option}\\'
 
-    # 根据执行操作类型判断目录是否存在
+        # 根据执行操作类型判断目录是否存在
     if not os.path.exists(base_data_path):
         os.mkdir(base_data_path)
         print(f'mk {type_option} directory')
 
     # 判断源文件是否存在
-    old_file_path = f"data/old/" + args.path
+    if sys.platform == 'darwin':
+        old_file_path = f"data/old/" + args.path
+    elif sys.platform == 'win32':
+        old_file_path = f"data\\old\\" + args.path
     if not os.path.exists(old_file_path):
         print(f'{old_file_path}old_file_path not exist')
 

@@ -18,7 +18,7 @@ import setuptools
 
 setuptools.setup(
     # 项目介绍
-    name='DataTools',
+    name='DataToolsJK',
     # 版本号
     version='1.0',
     # author
@@ -44,5 +44,5 @@ setuptools.setup(
     # 决定安装位置
     zip_safe=False,
     # 是否导入MANIFEST.in目录中的文件
-    include_package_data=True
+    # include_package_data=True
 )
