@@ -1,0 +1,8 @@
+/build
+/data/excel
+/data/old/*
+*.egg-info
+/dist
+MANIFEST.in
+.idea/
+.DS_Store
