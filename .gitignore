@@ -1,6 +1,6 @@
 /build
 /data/excel
-/data/old/*
+/data/old/*.xlsx
 *.egg-info
 /dist
 MANIFEST.in
